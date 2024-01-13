@@ -1,0 +1,89 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "ss1-prod-value-api",
+    "version" : "2024-01-13 12:33:53UTC"
+  },
+  "servers" : [ {
+    "url" : "https://yzg4a85bp5.execute-api.us-east-2.amazonaws.com/{basePath}",
+    "variables" : {
+      "basePath" : {
+        "default" : ""
+      }
+    }
+  } ],
+  "paths" : {
+    "/value/{key}" : {
+      "get" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for GET /value/{key}"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-2:992382695716:function:ss1-prod-keyvals/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "delete" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for DELETE /value/{key}"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-2:992382695716:function:ss1-prod-keyvals/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "parameters" : [ {
+        "name" : "key",
+        "in" : "path",
+        "description" : "Generated path parameter for key",
+        "required" : true,
+        "schema" : {
+          "type" : "string"
+        }
+      } ]
+    },
+    "/values" : {
+      "get" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for GET /values"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-2:992382695716:function:ss1-prod-keyvals/invocations",
+          "connectionType" : "INTERNET"
+        }
+      }
+    },
+    "/value" : {
+      "put" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for PUT /value"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-2:992382695716:function:ss1-prod-keyvals/invocations",
+          "connectionType" : "INTERNET"
+        }
+      }
+    }
+  },
+  "x-amazon-apigateway-importexport-version" : "1.0"
+}
