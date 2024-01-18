@@ -8,12 +8,9 @@ Authors:
 The purpose of this repository is provide samples for using the simple secret service.
 
 Directories:
-- stubs
-- sample
-
-## Reference:
-- 
-- https://aws.com
+- api - API documentation
+- sample - sample usage programs
+- util - utility helper functions
 
 
 
