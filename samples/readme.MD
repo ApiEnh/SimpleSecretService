@@ -1,20 +1,20 @@
-#Curl examples
+# Curl examples
 
-##Curl
+## Curl
 
 ```
                     curl -X "GET" "https://api.simplesecretservice.com/value?user=USERNAME&password=PASSWORD!&key=MYKEYNAME"
 ```
-##Linux variable
+## Linux variable
 ```
                     export secret="$(curl 'https://api.SimpleSecretService.com/value?user=USER&password=PASS!&key=NAME')"
 ```
-##Powershell variable
+## Powershell variable
 ```
                     $SimpleSecret = (curl "https://api.SimpleSecretService.com/value?user=$user&password=$password&key=$keyname").Content
 ```
 
-##Windows batch file variable
+## Windows batch file variable
 ```
                     "for /f "delims=" %%a in ('curl -X "GET" "https://api.simplesecretservice.com/value?user=USER&password=PASSWORD!&key=KEY"') do (<br>
                         &nbsp;&nbsp;set "myVar=%%a" <br>
