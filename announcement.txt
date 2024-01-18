@@ -1,5 +1,4 @@
-
-Need a way to keep your API keys, DB passwords and other sensitive data out of your code?
+Putting your data at risk by storing API keys, passwords or other credentials in code or scripts?
 
 SimpleSecretService.com is a new tool to allow you to setup your secrets or parameters in the cloud and access easily from all your code or systems. 
 This works great with OpenAI ChatGPT, Amazon AWS credentials, MySql and other databases, etc. 
