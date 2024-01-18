@@ -5,7 +5,13 @@ import openai
 from secrets import getSecret
 
 #openai.api_key = 'sk-kS_NOT_A_WORKING_KEY_DONT_STORE_THEM_IN_CODE_tWumnk'
-open.api_key = getSecret('OpenApiKey')
+#keyname = 'myKeyname' # as stored on the SimpleSecretService
+keyname=None
+
+if keyname is None:
+    keyname = input("Enter name of secret: ")
+
+openai.api_key = getSecret(keyname)
 
 # 16k tokens
 openaiModel = 'gpt-3.5-turbo-16k-0613'
@@ -37,8 +43,10 @@ def getReply(messages, request):
 # main
 # interactive usage code example
 
+print("starting chat. Ctrl-C to exit.")
+
 while True:
-    message = input("User : ")
+    message = input("Chat user : ")
     if message:
         messages, reply = getReply(messages, message)
     print(f"ChatGPT: {reply}")
