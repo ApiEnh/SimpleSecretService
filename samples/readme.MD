@@ -16,6 +16,6 @@ $SimpleSecret = (curl "https://api.SimpleSecretService.com/value?user=$user&pass
 
 ### Windows batch file variable
 ```
-"for /f "delims=" %%a in ('curl -X "GET" "https://api.simplesecretservice.com/value?user=USER&password=PASSWORD!&key=KEY"') do (<br>
-&nbsp;&nbsp;set "myVar=%%a" <br>
+for /f "delims=" %%a in ('curl -X "GET" "https://api.simplesecretservice.com/value?user=USER&password=PASSWORD!&key=KEY"') do (<
+  set "myVar=%%a"
 ```
