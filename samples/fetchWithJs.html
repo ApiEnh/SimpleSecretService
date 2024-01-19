@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SimpleSecretService demo</title>
+    <script>
+
+        //
+        // get value
+        //
+        async function fetchData(event) {
+            event.preventDefault(); // Prevent default form submission
+            let response_text = "";
+            document.getElementById('msg').textContent = "";
+
+            // construct url, query params have the easiest time with CORS but post may also work
+            //
+            // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+
+            // construct url
+            let url = 'https://api.simplesecretservice.com/value';
+            url = url + '?key=' + encodeURIComponent(document.getElementById('name').value);
+            url = url + '&user=' + encodeURIComponent(document.getElementById('user').value);
+            url = url + '&password=' + encodeURIComponent(document.getElementById('password').value);
+
+            try {
+                const fetchPromise = fetch(url);
+
+                fetchPromise
+                .then((response) => response.text())
+                .then((data) => {
+                    response_text = data;
+                    document.getElementById('msg').textContent = response_text;
+                });
+            }
+            
+            catch (error) {
+                console.error(error);
+                document.getElementById('msg').textContent = error;
+            }
+
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+<header>
+    <h1>Get secret demo</h1>
+</header>
+    <form>
+        <label for="user">User:</label>
+        <input type="text" id="user" value=""></input><br><br>     
+        <label for="password">Password:</label>
+        <input type="password" id="password" value=""></input><br><br>
+        <label for="name">Secret name:</label>
+        <input type="text" id="name" value=""></input><br><br>
+        <input type="submit" value="Fetch" onclick="fetchData(event)">
+    </form>
+    <p id="msg">Value retrieved</p>
+</body>
+</html>
