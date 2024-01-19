@@ -1,18 +1,3 @@
-I'm having trouble getting fetch on https to work reliably in node or in a browser.  
-  The editor.html page works and can be used in as a code sample, but if I simplify the same file to have a simple form, then the fetch doesn't return data properly even when the
-  server code returns expected 200 data. Similarly in node this code returns text "[object promise]" and I'm not sure why. contact me at apienhancement @ gmail dot com if you can 
-  get a simple working sample.
+Please see the javascript sample.  
 
-  should work properly in async function but returns response text [object promise].
-  
-    try {
-        let response = await fetch(url);
-        if (!response.ok) {
-            throw response;
-        }
-        let response_text = await response.text();
-        session = response_text;
-    }
-    catch (error) {
-        throw error;
-    }
+A simple fetch that worked in node from the command line didn't seem to work. Let me know if you can make a function that works.
