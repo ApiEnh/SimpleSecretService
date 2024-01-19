@@ -2,7 +2,9 @@
 ```Python
 python3 chatGpt.py
 ```
-# Curl examples
+### Demo Javascript website (right click view page source)
+https://simplesecretservice.com/fetchWithJs.html
+## Curl examples
 
 ### Curl
 ```
