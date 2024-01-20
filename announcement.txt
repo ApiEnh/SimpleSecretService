@@ -1,7 +1,7 @@
 Putting your data at risk by storing API keys, passwords or other credentials in code or scripts?
 
 SimpleSecretService.com is a new tool to allow you to setup your secrets or parameters in the cloud and access easily from all your code or systems. 
-This works great with OpenAI ChatGPT, Amazon AWS credentials, MySql and other databases, etc. 
+This works great with OpenAI ChatGPT, Amazon AWS credentials, MySql, Azure, Google Cloud GCP and other databases, etc. 
 I created this secure by design service because I was running code on Kaggle, AWS instances and my local system and didn't want to accidentally expose my keys through Github or a filesystem. 
 The website has samples of accessing your secrets using a single line of code with a helper function or Curl command for Linux, Python, Javascript, HTML, Powershell or .bat file.
 
